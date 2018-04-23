@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[【原创】关于git操作]]></title>
+    <url>%2Fblog%2F2017%2F10%2F20%2F%E3%80%90%E5%8E%9F%E5%88%9B%E3%80%91%E5%85%B3%E4%BA%8Egit%E6%93%8D%E4%BD%9C%2F</url>
+    <content type="text"><![CDATA[一、误操作git pull之后如何撤销？1、git reflog命令查看历史变更记录2、git reset –hard HEAD@{n}，（n是要回退到的引用位置）回退。 二、git回滚1、git log 查看提交的日志，找到要回滚的commit编号，比如：e377f60e28c8b841582、git reset –hard e377f60e28c8b84158 回滚3、git push -f origin master 强制提交]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[【原创】UC浏览器中不显示img图片]]></title>
+    <url>%2Fblog%2F2017%2F09%2F27%2F%E3%80%90%E5%8E%9F%E5%88%9B%E3%80%91UC%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E4%B8%8D%E6%98%BE%E7%A4%BAimg%E5%9B%BE%E7%89%87%2F</url>
+    <content type="text"><![CDATA[&emsp;&emsp;前段时间做移动站项目，需求是要在首页加一个开屏广告，然后就写写写，一切弄好了，测试了一圈，发现没什么大问题，BUT，当我用UC浏览器打开之后，发现所有的img图片都不加载，我擦嘞，这是啥情况？？？没办法，只好吭哧吭哧调试，我把图片路径换成本地的，不行，换成cdn地址的，不行，这就尴尬了。。。从来没遇到过这种情况，明明图片地址是对的，在别的浏览器上也能显示，为什么UC就不行？&emsp;&emsp;由于在移动端UC浏览器，也不是很好调试，总之就是折腾了半天之后发现：我所有的img标签都有一个行内样式”display:none !important“，WHAT？！&emsp;&emsp;我没有给img加这个样式啊？为啥会出现这个情况？难道跟浏览器有关系？接着就比较了一下UC和其他能显示的浏览器有什么区别，最后发现，是因为我测试的手机UC浏览器比其他浏览器多设置了一个广告拦截，把广告拦截关闭之后图片就能显示了。&emsp;&emsp;但是实际中要求每一个来网站的用户都去关闭这个设置是一件非常shi的事情，所以还是得找到原因。尝试着改了一下图片名字，广告拦截打开也能显示了，比较了一下，最后发现是因为我为了区别各个功能模块之间的图片，在图片名称前都加了前缀，比如导航的图片就会添加nav-，这里定义是广告，我就添加了ad-，然后就被当做垃圾信息过滤掉了，找到问题的根源了，那就好解决了，先把图片名字换掉，上传cdn，结果还是不显示，然后又看到cdn上图片的文件夹叫guanggao，果断改掉，这样就可以了！]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[【原创】前端开发过程中遇到的问题及解决方法]]></title>
+    <url>%2Fblog%2F2017%2F09%2F25%2F%E3%80%90%E5%8E%9F%E5%88%9B%E3%80%91%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[1、ios中去除button的默认样式,也可以去掉input的双边框 解决办法：1234input[type=button]&#123; -webkit-appearance:none; outline:none&#125; 2、safari中input[type=”text”]不能输入解决办法：123*:not(input) &#123; -webkit-user-select: none;&#125; 3、多行文本超出隐藏解决办法：12345678.parent&#123; overflow:hidden; //超出的文本隐藏 text-overflow:ellipsis; //溢出用省略号显示 white-space:nowrap; //溢出不换行 display:-webkit-box; //将对象作为弹性伸缩盒子模型显示。 -webkit-box-orient:vertical; //从上到下垂直排列子元素（设置伸缩盒子的子元素排列方式） -webkit-line-clamp:2; //这个属性不是css的规范属性，需要组合上面两个属性，表示显示的行数。&#125; 4、form表单中的button如果是submit类型，会与回车事件冲突5、获取url参数12345function GetQueryString(name)&#123; var reg = new RegExp(&quot;(^|&amp;)&quot;+ name +&quot;=([^&amp;]*)(&amp;|$)&quot;); var r = window.location.search.substr(1).match(reg); if(r!=null)return unescape(r[2]); return null;&#125;;]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[【原创】移动端浏览器隐私模式或者无痕模式会影响localStorage/sessionStorage使用]]></title>
+    <url>%2Fblog%2F2017%2F08%2F29%2F%E3%80%90%E5%8E%9F%E5%88%9B%E3%80%91%E7%A7%BB%E5%8A%A8%E7%AB%AF%E6%B5%8F%E8%A7%88%E5%99%A8%E9%9A%90%E7%A7%81%E6%A8%A1%E5%BC%8F%E6%88%96%E8%80%85%E6%97%A0%E7%97%95%E6%A8%A1%E5%BC%8F%E4%BC%9A%E5%BD%B1%E5%93%8DlocalStorage-sessionStorage%E4%BD%BF%E7%94%A8%2F</url>
+    <content type="text"><![CDATA[&emsp;&emsp;新项目中有需求用到了sessionStorage，但是在一些手机里一遇到和sessionStorage相关的代码就不执行，这给我急的，然后调试了一下发现是手机开启了无痕模式浏览，影响了sessionStorage的使用。&emsp;&emsp;找到了问题的根源，那剩下的事情就是解决了：总结来说就是在移动使用sessionStorage或者localStorage时，首先要判断是否支持，或者说是否被禁用，如果支持（或者没有被禁用），那么可以直接使用，如果被禁用了，可能就要换一种方式了。&emsp;&emsp;判断方法如下：12345678function isStorageSupported() &#123; try &#123; window.sessionStorage.setItem(key, &apos;test&apos;); return true; &#125; catch (error) &#123; return false; &#125;&#125;]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[【转载】在浏览器中输入网址到打开网页的过程]]></title>
+    <url>%2Fblog%2F2017%2F04%2F13%2F%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E5%9C%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E8%BE%93%E5%85%A5%E7%BD%91%E5%9D%80%E5%88%B0%E6%89%93%E5%BC%80%E7%BD%91%E9%A1%B5%E7%9A%84%E8%BF%87%E7%A8%8B%2F</url>
+    <content type="text"><![CDATA[以chrome为例一、域名解析：浏览器会将当前输入的URL发送至DNS服务器并获得域名对应的WEB服务器的ip地址，过程如下： 1、chrome搜索自身的DNS缓存（有没有以及有没有过期），查看chrome自身的缓存：chrome://net-internals/#dns2、chrome浏览器没有找到自身缓存或者缓存已经失效，就会搜索操作系统自身的DNS缓存（有没有以及有没有过期）3、操作系统自身的DNS缓存没有找到或者已经失效，chrome会读取本地的HOST文件4、本地HOST文件的缓存没有找到或者已经失效，chrome会发起一个DNS的一个系统调用，即chrome以系统的名义向本地宽带运营商的 dns 服务器发起一个域名解析的请求，过程如下：a、宽带运营商服务器查看本身缓存b、运营商服务器代替浏览器发起一个迭代DNS解析的请求，运营商服务器把结果返回操作系统内核同时缓存起来c、操作系统内核把结果返回浏览器d、最终，浏览器拿到了网址对应的IP地址 二、浏览器获得域名对应的IP地址后，发起HTTP“三次握手”，建立TCP/IP连接三、tcp/ip 连接建立起来后，浏览器就可以向服务器发送 HTTP 请求了，比如说使用 get 方式请求一个域名。四、服务器收到这个请求后，根据路径参数，再经过后端的一些处理，把结果返回给浏览器，这样我们就得到了该域名对应的整个页面的代码或者其他的数据。五、浏览器拿到代码后，经过解析、渲染等，我们就看到了这个页面。值得注意的是：第五步中页面中的每一个 css 、js、图片等静态资源都需要一个 HTTP 请求。都需要上面的步骤。]]></content>
+  </entry>
+</search>
