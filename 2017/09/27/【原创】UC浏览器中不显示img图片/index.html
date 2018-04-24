@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="&amp;emsp;&amp;emsp;前段时间做移动站项目，需求是要在首页加一个开屏广告，然后就写写写，一切弄好了，测试了一圈，发现没什么大问题，BUT，当我用UC浏览器打开之后，发现所有的img图片都不加载，我擦嘞，这是啥情况？？？没办法，只好吭哧吭哧调试，我把图片路径换成本地的，不行，换成cdn地址的，不行，这就尴尬了。。。从来没遇到过这种情况，明明图片地址是对的，在别的浏览器上也能显示，为什么UC就不行？">
+<meta name="description" content="前言 本文主要介绍UC浏览器中不显示img的问题，主要关注的是解决问题的思路">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【原创】UC浏览器中不显示img图片">
 <meta property="og:url" content="http://yoursite.com/2017/09/27/【原创】UC浏览器中不显示img图片/index.html">
 <meta property="og:site_name" content="Eternal丶">
-<meta property="og:description" content="&amp;emsp;&amp;emsp;前段时间做移动站项目，需求是要在首页加一个开屏广告，然后就写写写，一切弄好了，测试了一圈，发现没什么大问题，BUT，当我用UC浏览器打开之后，发现所有的img图片都不加载，我擦嘞，这是啥情况？？？没办法，只好吭哧吭哧调试，我把图片路径换成本地的，不行，换成cdn地址的，不行，这就尴尬了。。。从来没遇到过这种情况，明明图片地址是对的，在别的浏览器上也能显示，为什么UC就不行？">
+<meta property="og:description" content="前言 本文主要介绍UC浏览器中不显示img的问题，主要关注的是解决问题的思路">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-23T09:02:44.071Z">
+<meta property="og:updated_time" content="2018-04-24T03:11:25.551Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【原创】UC浏览器中不显示img图片">
-<meta name="twitter:description" content="&amp;emsp;&amp;emsp;前段时间做移动站项目，需求是要在首页加一个开屏广告，然后就写写写，一切弄好了，测试了一圈，发现没什么大问题，BUT，当我用UC浏览器打开之后，发现所有的img图片都不加载，我擦嘞，这是啥情况？？？没办法，只好吭哧吭哧调试，我把图片路径换成本地的，不行，换成cdn地址的，不行，这就尴尬了。。。从来没遇到过这种情况，明明图片地址是对的，在别的浏览器上也能显示，为什么UC就不行？">
+<meta name="twitter:description" content="前言 本文主要介绍UC浏览器中不显示img的问题，主要关注的是解决问题的思路">
 
 
 
@@ -333,7 +333,11 @@
       
 
       
-        <p>&emsp;&emsp;前段时间做移动站项目，需求是要在首页加一个开屏广告，然后就写写写，一切弄好了，测试了一圈，发现没什么大问题，BUT，当我用UC浏览器打开之后，发现所有的img图片都不加载，我擦嘞，这是啥情况？？？<br>没办法，只好吭哧吭哧调试，我把图片路径换成本地的，不行，换成cdn地址的，不行，这就尴尬了。。。从来没遇到过这种情况，明明图片地址是对的，在别的浏览器上也能显示，为什么UC就不行？<br>&emsp;&emsp;由于在移动端UC浏览器，也不是很好调试，总之就是折腾了半天之后发现：我所有的img标签都有一个行内样式”display:none !important“，WHAT？！<br>&emsp;&emsp;我没有给img加这个样式啊？为啥会出现这个情况？难道跟浏览器有关系？接着就比较了一下UC和其他能显示的浏览器有什么区别，最后发现，是因为我测试的手机UC浏览器比其他浏览器多设置了一个广告拦截，把广告拦截关闭之后图片就能显示了。<br>&emsp;&emsp;但是实际中要求每一个来网站的用户都去关闭这个设置是一件非常shi的事情，所以还是得找到原因。尝试着改了一下图片名字，广告拦截打开也能显示了，比较了一下，最后发现是因为我为了区别各个功能模块之间的图片，在图片名称前都加了前缀，比如导航的图片就会添加nav-，这里定义是广告，我就添加了ad-，然后就被当做垃圾信息过滤掉了，找到问题的根源了，那就好解决了，先把图片名字换掉，上传cdn，结果还是不显示，然后又看到cdn上图片的文件夹叫guanggao，果断改掉，这样就可以了！</p>
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
+<p>本文主要介绍UC浏览器中不显示img的问题，主要关注的是解决问题的思路</p>
+</blockquote>
+<a id="more"></a>
+<p>&emsp;&emsp;前段时间做移动站项目，需求是要在首页加一个开屏广告，然后就写写写，一切弄好了，测试了一圈，发现没什么大问题，BUT，当我用UC浏览器打开之后，发现所有的img图片都不加载，我擦嘞，这是啥情况？？？<br>没办法，只好吭哧吭哧调试，我把图片路径换成本地的，不行，换成cdn地址的，不行，这就尴尬了。。。从来没遇到过这种情况，明明图片地址是对的，在别的浏览器上也能显示，为什么UC就不行？<br>&emsp;&emsp;由于在移动端UC浏览器，也不是很好调试，总之就是折腾了半天之后发现：我所有的img标签都有一个行内样式”display:none !important“，WHAT？！<br>&emsp;&emsp;我没有给img加这个样式啊？为啥会出现这个情况？难道跟浏览器有关系？接着就比较了一下UC和其他能显示的浏览器有什么区别，最后发现，是因为我测试的手机UC浏览器比其他浏览器多设置了一个广告拦截，把广告拦截关闭之后图片就能显示了。<br>&emsp;&emsp;但是实际中要求每一个来网站的用户都去关闭这个设置是一件非常shi的事情，所以还是得找到原因。尝试着改了一下图片名字，广告拦截打开也能显示了，比较了一下，最后发现是因为我为了区别各个功能模块之间的图片，在图片名称前都加了前缀，比如导航的图片就会添加nav-，这里定义是广告，我就添加了ad-，然后就被当做垃圾信息过滤掉了，找到问题的根源了，那就好解决了，先把图片名字换掉，上传cdn，结果还是不显示，然后又看到cdn上图片的文件夹叫guanggao，果断改掉，这样就可以了！</p>
 
       
     </div>
@@ -422,8 +426,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -442,7 +455,7 @@
               
                 <a href="/blog/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -479,6 +492,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

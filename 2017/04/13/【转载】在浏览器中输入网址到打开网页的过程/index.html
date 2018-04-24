@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="以chrome为例一、域名解析：浏览器会将当前输入的URL发送至DNS服务器并获得域名对应的WEB服务器的ip地址，过程如下： 1、chrome搜索自身的DNS缓存（有没有以及有没有过期），查看chrome自身的缓存：chrome://net-internals/#dns2、chrome浏览器没有找到自身缓存或者缓存已经失效，就会搜索操作系统自身的DNS缓存（有没有以及有没有过期）3、操作系统自身">
+<meta name="description" content="前言 本文以chrome为例，介绍了在浏览器中输入网址到打开网页的过程，记录流程，并没有深究太多">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【转载】在浏览器中输入网址到打开网页的过程">
 <meta property="og:url" content="http://yoursite.com/2017/04/13/【转载】在浏览器中输入网址到打开网页的过程/index.html">
 <meta property="og:site_name" content="Eternal丶">
-<meta property="og:description" content="以chrome为例一、域名解析：浏览器会将当前输入的URL发送至DNS服务器并获得域名对应的WEB服务器的ip地址，过程如下： 1、chrome搜索自身的DNS缓存（有没有以及有没有过期），查看chrome自身的缓存：chrome://net-internals/#dns2、chrome浏览器没有找到自身缓存或者缓存已经失效，就会搜索操作系统自身的DNS缓存（有没有以及有没有过期）3、操作系统自身">
+<meta property="og:description" content="前言 本文以chrome为例，介绍了在浏览器中输入网址到打开网页的过程，记录流程，并没有深究太多">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-23T09:03:05.495Z">
+<meta property="og:updated_time" content="2018-04-24T03:11:25.554Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【转载】在浏览器中输入网址到打开网页的过程">
-<meta name="twitter:description" content="以chrome为例一、域名解析：浏览器会将当前输入的URL发送至DNS服务器并获得域名对应的WEB服务器的ip地址，过程如下： 1、chrome搜索自身的DNS缓存（有没有以及有没有过期），查看chrome自身的缓存：chrome://net-internals/#dns2、chrome浏览器没有找到自身缓存或者缓存已经失效，就会搜索操作系统自身的DNS缓存（有没有以及有没有过期）3、操作系统自身">
+<meta name="twitter:description" content="前言 本文以chrome为例，介绍了在浏览器中输入网址到打开网页的过程，记录流程，并没有深究太多">
 
 
 
@@ -333,7 +333,11 @@
       
 
       
-        <h3 id="以chrome为例"><a href="#以chrome为例" class="headerlink" title="以chrome为例"></a>以chrome为例</h3><h5 id="一、域名解析：浏览器会将当前输入的URL发送至DNS服务器并获得域名对应的WEB服务器的ip地址，过程如下："><a href="#一、域名解析：浏览器会将当前输入的URL发送至DNS服务器并获得域名对应的WEB服务器的ip地址，过程如下：" class="headerlink" title="一、域名解析：浏览器会将当前输入的URL发送至DNS服务器并获得域名对应的WEB服务器的ip地址，过程如下："></a>一、域名解析：浏览器会将当前输入的URL发送至DNS服务器并获得域名对应的WEB服务器的ip地址，过程如下：</h5><blockquote>
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
+<p>本文以chrome为例，介绍了在浏览器中输入网址到打开网页的过程，记录流程，并没有深究太多</p>
+</blockquote>
+<a id="more"></a>
+<h3 id="以chrome为例"><a href="#以chrome为例" class="headerlink" title="以chrome为例"></a>以chrome为例</h3><h5 id="一、域名解析：浏览器会将当前输入的URL发送至DNS服务器并获得域名对应的WEB服务器的ip地址，过程如下："><a href="#一、域名解析：浏览器会将当前输入的URL发送至DNS服务器并获得域名对应的WEB服务器的ip地址，过程如下：" class="headerlink" title="一、域名解析：浏览器会将当前输入的URL发送至DNS服务器并获得域名对应的WEB服务器的ip地址，过程如下："></a>一、域名解析：浏览器会将当前输入的URL发送至DNS服务器并获得域名对应的WEB服务器的ip地址，过程如下：</h5><blockquote>
 <p>1、chrome搜索自身的DNS缓存（有没有以及有没有过期），查看chrome自身的缓存：chrome://net-internals/#dns<br>2、chrome浏览器没有找到自身缓存或者缓存已经失效，就会搜索操作系统自身的DNS缓存（有没有以及有没有过期）<br>3、操作系统自身的DNS缓存没有找到或者已经失效，chrome会读取本地的HOST文件<br>4、本地HOST文件的缓存没有找到或者已经失效，chrome会发起一个DNS的一个系统调用，即chrome以系统的名义向本地宽带运营商的 dns 服务器发起一个域名解析的请求，过程如下：<br>a、宽带运营商服务器查看本身缓存<br>b、运营商服务器代替浏览器发起一个迭代DNS解析的请求，运营商服务器把结果返回操作系统内核同时缓存起来<br>c、操作系统内核把结果返回浏览器<br>d、最终，浏览器拿到了网址对应的IP地址</p>
 </blockquote>
 <h5 id="二、浏览器获得域名对应的IP地址后，发起HTTP“三次握手”，建立TCP-IP连接"><a href="#二、浏览器获得域名对应的IP地址后，发起HTTP“三次握手”，建立TCP-IP连接" class="headerlink" title="二、浏览器获得域名对应的IP地址后，发起HTTP“三次握手”，建立TCP/IP连接"></a>二、浏览器获得域名对应的IP地址后，发起HTTP“三次握手”，建立TCP/IP连接</h5><h5 id="三、tcp-ip-连接建立起来后，浏览器就可以向服务器发送-HTTP-请求了，比如说使用-get-方式请求一个域名。"><a href="#三、tcp-ip-连接建立起来后，浏览器就可以向服务器发送-HTTP-请求了，比如说使用-get-方式请求一个域名。" class="headerlink" title="三、tcp/ip 连接建立起来后，浏览器就可以向服务器发送 HTTP 请求了，比如说使用 get 方式请求一个域名。"></a>三、tcp/ip 连接建立起来后，浏览器就可以向服务器发送 HTTP 请求了，比如说使用 get 方式请求一个域名。</h5><h5 id="四、服务器收到这个请求后，根据路径参数，再经过后端的一些处理，把结果返回给浏览器，这样我们就得到了该域名对应的整个页面的代码或者其他的数据。"><a href="#四、服务器收到这个请求后，根据路径参数，再经过后端的一些处理，把结果返回给浏览器，这样我们就得到了该域名对应的整个页面的代码或者其他的数据。" class="headerlink" title="四、服务器收到这个请求后，根据路径参数，再经过后端的一些处理，把结果返回给浏览器，这样我们就得到了该域名对应的整个页面的代码或者其他的数据。"></a>四、服务器收到这个请求后，根据路径参数，再经过后端的一些处理，把结果返回给浏览器，这样我们就得到了该域名对应的整个页面的代码或者其他的数据。</h5><h5 id="五、浏览器拿到代码后，经过解析、渲染等，我们就看到了这个页面。"><a href="#五、浏览器拿到代码后，经过解析、渲染等，我们就看到了这个页面。" class="headerlink" title="五、浏览器拿到代码后，经过解析、渲染等，我们就看到了这个页面。"></a>五、浏览器拿到代码后，经过解析、渲染等，我们就看到了这个页面。</h5><p><em>值得注意的是：第五步中页面中的每一个 css 、js、图片等静态资源都需要一个 HTTP 请求。都需要上面的步骤。</em></p>
@@ -367,8 +371,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/blog/2017/08/29/【原创】移动端浏览器隐私模式或者无痕模式会影响localStorage-sessionStorage使用/" rel="prev" title="【原创】移动端浏览器隐私模式或者无痕模式会影响localStorage/sessionStorage使用">
-                【原创】移动端浏览器隐私模式或者无痕模式会影响localStorage/sessionStorage使用 <i class="fa fa-chevron-right"></i>
+              <a href="/blog/2017/08/28/【原创】如何使用电脑上的谷歌浏览器来调试移动端页面/" rel="prev" title="【原创】如何使用电脑上的谷歌浏览器来调试移动端页面">
+                【原创】如何使用电脑上的谷歌浏览器来调试移动端页面 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -450,7 +454,7 @@
               
                 <a href="/blog/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -497,7 +501,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#以chrome为例"><span class="nav-number">1.</span> <span class="nav-text">以chrome为例</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#一、域名解析：浏览器会将当前输入的URL发送至DNS服务器并获得域名对应的WEB服务器的ip地址，过程如下："><span class="nav-number">1.0.1.</span> <span class="nav-text">一、域名解析：浏览器会将当前输入的URL发送至DNS服务器并获得域名对应的WEB服务器的ip地址，过程如下：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#二、浏览器获得域名对应的IP地址后，发起HTTP“三次握手”，建立TCP-IP连接"><span class="nav-number">1.0.2.</span> <span class="nav-text">二、浏览器获得域名对应的IP地址后，发起HTTP“三次握手”，建立TCP/IP连接</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#三、tcp-ip-连接建立起来后，浏览器就可以向服务器发送-HTTP-请求了，比如说使用-get-方式请求一个域名。"><span class="nav-number">1.0.3.</span> <span class="nav-text">三、tcp/ip 连接建立起来后，浏览器就可以向服务器发送 HTTP 请求了，比如说使用 get 方式请求一个域名。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#四、服务器收到这个请求后，根据路径参数，再经过后端的一些处理，把结果返回给浏览器，这样我们就得到了该域名对应的整个页面的代码或者其他的数据。"><span class="nav-number">1.0.4.</span> <span class="nav-text">四、服务器收到这个请求后，根据路径参数，再经过后端的一些处理，把结果返回给浏览器，这样我们就得到了该域名对应的整个页面的代码或者其他的数据。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#五、浏览器拿到代码后，经过解析、渲染等，我们就看到了这个页面。"><span class="nav-number">1.0.5.</span> <span class="nav-text">五、浏览器拿到代码后，经过解析、渲染等，我们就看到了这个页面。</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#以chrome为例"><span class="nav-number">2.</span> <span class="nav-text">以chrome为例</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#一、域名解析：浏览器会将当前输入的URL发送至DNS服务器并获得域名对应的WEB服务器的ip地址，过程如下："><span class="nav-number">2.0.1.</span> <span class="nav-text">一、域名解析：浏览器会将当前输入的URL发送至DNS服务器并获得域名对应的WEB服务器的ip地址，过程如下：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#二、浏览器获得域名对应的IP地址后，发起HTTP“三次握手”，建立TCP-IP连接"><span class="nav-number">2.0.2.</span> <span class="nav-text">二、浏览器获得域名对应的IP地址后，发起HTTP“三次握手”，建立TCP/IP连接</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#三、tcp-ip-连接建立起来后，浏览器就可以向服务器发送-HTTP-请求了，比如说使用-get-方式请求一个域名。"><span class="nav-number">2.0.3.</span> <span class="nav-text">三、tcp/ip 连接建立起来后，浏览器就可以向服务器发送 HTTP 请求了，比如说使用 get 方式请求一个域名。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#四、服务器收到这个请求后，根据路径参数，再经过后端的一些处理，把结果返回给浏览器，这样我们就得到了该域名对应的整个页面的代码或者其他的数据。"><span class="nav-number">2.0.4.</span> <span class="nav-text">四、服务器收到这个请求后，根据路径参数，再经过后端的一些处理，把结果返回给浏览器，这样我们就得到了该域名对应的整个页面的代码或者其他的数据。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#五、浏览器拿到代码后，经过解析、渲染等，我们就看到了这个页面。"><span class="nav-number">2.0.5.</span> <span class="nav-text">五、浏览器拿到代码后，经过解析、渲染等，我们就看到了这个页面。</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

@@ -79,16 +79,27 @@
 
 
 
-<meta name="description" content="一个渣渣前端闲来无事的产出">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Eternal丶">
-<meta property="og:url" content="http://yoursite.com/archives/2017/09/index.html">
+<meta name="description" content="前言 参照文章解决问题的前提是手机和电脑上都需要安装谷歌浏览器">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【原创】如何使用电脑上的谷歌浏览器来调试移动端页面">
+<meta property="og:url" content="http://yoursite.com/2017/08/28/【原创】如何使用电脑上的谷歌浏览器来调试移动端页面/index.html">
 <meta property="og:site_name" content="Eternal丶">
-<meta property="og:description" content="一个渣渣前端闲来无事的产出">
+<meta property="og:description" content="前言 参照文章解决问题的前提是手机和电脑上都需要安装谷歌浏览器">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://eternal-blog.oss-cn-beijing.aliyuncs.com/blog/pic-5.jpg?Expires=1524542579&OSSAccessKeyId=TMP.AQGzY87mNUovU8LV8U4kgzo6MR2EIAGVKNjoWPNxxaqaXRkEGdZ8QsCjDHw2MC4CFQDpn0gWQe5Q4LkUFvKBZ-mlW7ZRYQIVALmsjJh6xMFVtDAkWvAvlAPOjZlq&Signature=Bj2Rgu%2B5EYzwTOT4VNMryhgqE9o%3D">
+<meta property="og:image" content="https://eternal-blog.oss-cn-beijing.aliyuncs.com/blog/pic-6.jpg?Expires=1524542589&OSSAccessKeyId=TMP.AQGzY87mNUovU8LV8U4kgzo6MR2EIAGVKNjoWPNxxaqaXRkEGdZ8QsCjDHw2MC4CFQDpn0gWQe5Q4LkUFvKBZ-mlW7ZRYQIVALmsjJh6xMFVtDAkWvAvlAPOjZlq&Signature=CCX0TL8%2FLRpr4by9%2FMrz0GDvikw%3D">
+<meta property="og:image" content="https://eternal-blog.oss-cn-beijing.aliyuncs.com/blog/pic-7.jpg?Expires=1524542600&OSSAccessKeyId=TMP.AQGzY87mNUovU8LV8U4kgzo6MR2EIAGVKNjoWPNxxaqaXRkEGdZ8QsCjDHw2MC4CFQDpn0gWQe5Q4LkUFvKBZ-mlW7ZRYQIVALmsjJh6xMFVtDAkWvAvlAPOjZlq&Signature=GkGsaL1BvvYw6FzX2lKyxbVwNqY%3D">
+<meta property="og:image" content="https://eternal-blog.oss-cn-beijing.aliyuncs.com/blog/pic-8.jpg?Expires=1524542610&OSSAccessKeyId=TMP.AQGzY87mNUovU8LV8U4kgzo6MR2EIAGVKNjoWPNxxaqaXRkEGdZ8QsCjDHw2MC4CFQDpn0gWQe5Q4LkUFvKBZ-mlW7ZRYQIVALmsjJh6xMFVtDAkWvAvlAPOjZlq&Signature=%2Bo5GH6t0uqQvXEdcfsKHtXiK5jk%3D">
+<meta property="og:image" content="https://eternal-blog.oss-cn-beijing.aliyuncs.com/blog/pic-9.jpg?Expires=1524542622&OSSAccessKeyId=TMP.AQGzY87mNUovU8LV8U4kgzo6MR2EIAGVKNjoWPNxxaqaXRkEGdZ8QsCjDHw2MC4CFQDpn0gWQe5Q4LkUFvKBZ-mlW7ZRYQIVALmsjJh6xMFVtDAkWvAvlAPOjZlq&Signature=GRfg7UG1On6iDLj4tjGbJzt3QlI%3D">
+<meta property="og:image" content="https://eternal-blog.oss-cn-beijing.aliyuncs.com/blog/pic-10.jpg?Expires=1524542633&OSSAccessKeyId=TMP.AQGzY87mNUovU8LV8U4kgzo6MR2EIAGVKNjoWPNxxaqaXRkEGdZ8QsCjDHw2MC4CFQDpn0gWQe5Q4LkUFvKBZ-mlW7ZRYQIVALmsjJh6xMFVtDAkWvAvlAPOjZlq&Signature=4JbmUz47uaAimtNHJn%2FwMIMRSww%3D">
+<meta property="og:image" content="https://eternal-blog.oss-cn-beijing.aliyuncs.com/blog/pic-11.jpg?Expires=1524542646&OSSAccessKeyId=TMP.AQGzY87mNUovU8LV8U4kgzo6MR2EIAGVKNjoWPNxxaqaXRkEGdZ8QsCjDHw2MC4CFQDpn0gWQe5Q4LkUFvKBZ-mlW7ZRYQIVALmsjJh6xMFVtDAkWvAvlAPOjZlq&Signature=R7dR8mWpnehdr%2BkmiFk0JHVbfHQ%3D">
+<meta property="og:image" content="https://eternal-blog.oss-cn-beijing.aliyuncs.com/blog/pic-12.jpg?Expires=1524542656&OSSAccessKeyId=TMP.AQGzY87mNUovU8LV8U4kgzo6MR2EIAGVKNjoWPNxxaqaXRkEGdZ8QsCjDHw2MC4CFQDpn0gWQe5Q4LkUFvKBZ-mlW7ZRYQIVALmsjJh6xMFVtDAkWvAvlAPOjZlq&Signature=DGEuU666k5%2BtZI7TDTyk5TteFHQ%3D">
+<meta property="og:image" content="https://eternal-blog.oss-cn-beijing.aliyuncs.com/blog/pic-13.jpg?Expires=1524542667&OSSAccessKeyId=TMP.AQGzY87mNUovU8LV8U4kgzo6MR2EIAGVKNjoWPNxxaqaXRkEGdZ8QsCjDHw2MC4CFQDpn0gWQe5Q4LkUFvKBZ-mlW7ZRYQIVALmsjJh6xMFVtDAkWvAvlAPOjZlq&Signature=dw0K4x1wDeDXYjWvXw6iPa5MjgU%3D">
+<meta property="og:updated_time" content="2018-04-24T03:11:35.537Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Eternal丶">
-<meta name="twitter:description" content="一个渣渣前端闲来无事的产出">
+<meta name="twitter:title" content="【原创】如何使用电脑上的谷歌浏览器来调试移动端页面">
+<meta name="twitter:description" content="前言 参照文章解决问题的前提是手机和电脑上都需要安装谷歌浏览器">
+<meta name="twitter:image" content="https://eternal-blog.oss-cn-beijing.aliyuncs.com/blog/pic-5.jpg?Expires=1524542579&OSSAccessKeyId=TMP.AQGzY87mNUovU8LV8U4kgzo6MR2EIAGVKNjoWPNxxaqaXRkEGdZ8QsCjDHw2MC4CFQDpn0gWQe5Q4LkUFvKBZ-mlW7ZRYQIVALmsjJh6xMFVtDAkWvAvlAPOjZlq&Signature=Bj2Rgu%2B5EYzwTOT4VNMryhgqE9o%3D">
 
 
 
@@ -118,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2017/09/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/08/28/【原创】如何使用电脑上的谷歌浏览器来调试移动端页面/"/>
 
 
 
 
 
-  <title>Archive | Eternal丶</title>
+  <title>【原创】如何使用电脑上的谷歌浏览器来调试移动端页面 | Eternal丶</title>
   
 
 
@@ -143,7 +154,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -251,111 +262,156 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
-
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        Um..! 8 posts in total. Keep on posting.
-      </span>
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2017">2017</h1>
-          </div>
-        
-        
-
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/2017/08/28/【原创】如何使用电脑上的谷歌浏览器来调试移动端页面/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Eternal">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/blog/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Eternal丶">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/blog/2017/09/27/【原创】UC浏览器中不显示img图片/" itemprop="url">
-              
-                <span itemprop="name">【原创】UC浏览器中不显示img图片</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">【原创】如何使用电脑上的谷歌浏览器来调试移动端页面</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-27T14:37:32+08:00"
-              content="2017-09-27" >
-          09-27
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-28T14:15:14+08:00">
+                2017-08-28
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
 
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/blog/2017/09/25/【原创】前端开发过程中遇到的问题及解决方法/" itemprop="url">
-              
-                <span itemprop="name">【原创】前端开发过程中遇到的问题及解决方法</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-25T11:10:33+08:00"
-              content="2017-09-25" >
-          09-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
+<p>参照文章解决问题的前提是手机和电脑上都需要安装谷歌浏览器</p>
+</blockquote>
+<a id="more"></a>
+<h4 id="第一步：需要将自己的手机调成开发者模式，一般的安卓手机都是找到手机的版本号，然后连续点击7次左右，如图1所示："><a href="#第一步：需要将自己的手机调成开发者模式，一般的安卓手机都是找到手机的版本号，然后连续点击7次左右，如图1所示：" class="headerlink" title="第一步：需要将自己的手机调成开发者模式，一般的安卓手机都是找到手机的版本号，然后连续点击7次左右，如图1所示："></a>第一步：需要将自己的手机调成开发者模式，一般的安卓手机都是找到手机的版本号，然后连续点击7次左右，如图1所示：</h4><p><img src="https://eternal-blog.oss-cn-beijing.aliyuncs.com/blog/pic-5.jpg?Expires=1524542579&amp;OSSAccessKeyId=TMP.AQGzY87mNUovU8LV8U4kgzo6MR2EIAGVKNjoWPNxxaqaXRkEGdZ8QsCjDHw2MC4CFQDpn0gWQe5Q4LkUFvKBZ-mlW7ZRYQIVALmsjJh6xMFVtDAkWvAvlAPOjZlq&amp;Signature=Bj2Rgu%2B5EYzwTOT4VNMryhgqE9o%3D" alt="图1"></p>
+<h4 id="第二步：打开手机的设置选项，找到开发者选项"><a href="#第二步：打开手机的设置选项，找到开发者选项" class="headerlink" title="第二步：打开手机的设置选项，找到开发者选项"></a>第二步：打开手机的设置选项，找到开发者选项</h4><p><img src="https://eternal-blog.oss-cn-beijing.aliyuncs.com/blog/pic-6.jpg?Expires=1524542589&amp;OSSAccessKeyId=TMP.AQGzY87mNUovU8LV8U4kgzo6MR2EIAGVKNjoWPNxxaqaXRkEGdZ8QsCjDHw2MC4CFQDpn0gWQe5Q4LkUFvKBZ-mlW7ZRYQIVALmsjJh6xMFVtDAkWvAvlAPOjZlq&amp;Signature=CCX0TL8%2FLRpr4by9%2FMrz0GDvikw%3D" alt="图2"></p>
+<h4 id="第三步：将开发者选项和USB调试都打开"><a href="#第三步：将开发者选项和USB调试都打开" class="headerlink" title="第三步：将开发者选项和USB调试都打开"></a>第三步：将开发者选项和USB调试都打开</h4><p><img src="https://eternal-blog.oss-cn-beijing.aliyuncs.com/blog/pic-7.jpg?Expires=1524542600&amp;OSSAccessKeyId=TMP.AQGzY87mNUovU8LV8U4kgzo6MR2EIAGVKNjoWPNxxaqaXRkEGdZ8QsCjDHw2MC4CFQDpn0gWQe5Q4LkUFvKBZ-mlW7ZRYQIVALmsjJh6xMFVtDAkWvAvlAPOjZlq&amp;Signature=GkGsaL1BvvYw6FzX2lKyxbVwNqY%3D" alt="图3"></p>
+<h4 id="第四步：打开电脑上的谷歌浏览器，调出控制台，并点击图4和图5中箭头所指部分"><a href="#第四步：打开电脑上的谷歌浏览器，调出控制台，并点击图4和图5中箭头所指部分" class="headerlink" title="第四步：打开电脑上的谷歌浏览器，调出控制台，并点击图4和图5中箭头所指部分"></a>第四步：打开电脑上的谷歌浏览器，调出控制台，并点击图4和图5中箭头所指部分</h4><p><img src="https://eternal-blog.oss-cn-beijing.aliyuncs.com/blog/pic-8.jpg?Expires=1524542610&amp;OSSAccessKeyId=TMP.AQGzY87mNUovU8LV8U4kgzo6MR2EIAGVKNjoWPNxxaqaXRkEGdZ8QsCjDHw2MC4CFQDpn0gWQe5Q4LkUFvKBZ-mlW7ZRYQIVALmsjJh6xMFVtDAkWvAvlAPOjZlq&amp;Signature=%2Bo5GH6t0uqQvXEdcfsKHtXiK5jk%3D" alt="图4"><br><img src="https://eternal-blog.oss-cn-beijing.aliyuncs.com/blog/pic-9.jpg?Expires=1524542622&amp;OSSAccessKeyId=TMP.AQGzY87mNUovU8LV8U4kgzo6MR2EIAGVKNjoWPNxxaqaXRkEGdZ8QsCjDHw2MC4CFQDpn0gWQe5Q4LkUFvKBZ-mlW7ZRYQIVALmsjJh6xMFVtDAkWvAvlAPOjZlq&amp;Signature=GRfg7UG1On6iDLj4tjGbJzt3QlI%3D" alt="图5"></p>
+<h4 id="第五步：在之后出现的页面中要保证右边setting部分的第一个选项：Discover-USB-devices是选中状态，如图6"><a href="#第五步：在之后出现的页面中要保证右边setting部分的第一个选项：Discover-USB-devices是选中状态，如图6" class="headerlink" title="第五步：在之后出现的页面中要保证右边setting部分的第一个选项：Discover USB devices是选中状态，如图6"></a>第五步：在之后出现的页面中要保证右边setting部分的第一个选项：Discover USB devices是选中状态，如图6</h4><p><img src="https://eternal-blog.oss-cn-beijing.aliyuncs.com/blog/pic-10.jpg?Expires=1524542633&amp;OSSAccessKeyId=TMP.AQGzY87mNUovU8LV8U4kgzo6MR2EIAGVKNjoWPNxxaqaXRkEGdZ8QsCjDHw2MC4CFQDpn0gWQe5Q4LkUFvKBZ-mlW7ZRYQIVALmsjJh6xMFVtDAkWvAvlAPOjZlq&amp;Signature=4JbmUz47uaAimtNHJn%2FwMIMRSww%3D" alt="图6"></p>
+<h4 id="第六步：用你数据链连接你的电脑和手机，手机就会弹出一个连接提示，如图7所示，点击允许即可"><a href="#第六步：用你数据链连接你的电脑和手机，手机就会弹出一个连接提示，如图7所示，点击允许即可" class="headerlink" title="第六步：用你数据链连接你的电脑和手机，手机就会弹出一个连接提示，如图7所示，点击允许即可"></a>第六步：用你数据链连接你的电脑和手机，手机就会弹出一个连接提示，如图7所示，点击允许即可</h4><p><img src="https://eternal-blog.oss-cn-beijing.aliyuncs.com/blog/pic-11.jpg?Expires=1524542646&amp;OSSAccessKeyId=TMP.AQGzY87mNUovU8LV8U4kgzo6MR2EIAGVKNjoWPNxxaqaXRkEGdZ8QsCjDHw2MC4CFQDpn0gWQe5Q4LkUFvKBZ-mlW7ZRYQIVALmsjJh6xMFVtDAkWvAvlAPOjZlq&amp;Signature=R7dR8mWpnehdr%2BkmiFk0JHVbfHQ%3D" alt="图7"></p>
+<h4 id="第七步：在电脑上打开谷歌浏览器并输入chrome-inspect-，同时在手机上打开谷歌浏览器，并输入要调试的网页，如百度，点击inspect就可以调试页面啦"><a href="#第七步：在电脑上打开谷歌浏览器并输入chrome-inspect-，同时在手机上打开谷歌浏览器，并输入要调试的网页，如百度，点击inspect就可以调试页面啦" class="headerlink" title="第七步：在电脑上打开谷歌浏览器并输入chrome://inspect/，同时在手机上打开谷歌浏览器，并输入要调试的网页，如百度，点击inspect就可以调试页面啦"></a>第七步：在电脑上打开谷歌浏览器并输入chrome://inspect/，同时在手机上打开谷歌浏览器，并输入要调试的网页，如百度，点击inspect就可以调试页面啦</h4><p><img src="https://eternal-blog.oss-cn-beijing.aliyuncs.com/blog/pic-12.jpg?Expires=1524542656&amp;OSSAccessKeyId=TMP.AQGzY87mNUovU8LV8U4kgzo6MR2EIAGVKNjoWPNxxaqaXRkEGdZ8QsCjDHw2MC4CFQDpn0gWQe5Q4LkUFvKBZ-mlW7ZRYQIVALmsjJh6xMFVtDAkWvAvlAPOjZlq&amp;Signature=DGEuU666k5%2BtZI7TDTyk5TteFHQ%3D" alt="图8"></p>
+<h4 id="最后就是inspect的页面啦"><a href="#最后就是inspect的页面啦" class="headerlink" title="最后就是inspect的页面啦"></a>最后就是inspect的页面啦</h4><p><img src="https://eternal-blog.oss-cn-beijing.aliyuncs.com/blog/pic-13.jpg?Expires=1524542667&amp;OSSAccessKeyId=TMP.AQGzY87mNUovU8LV8U4kgzo6MR2EIAGVKNjoWPNxxaqaXRkEGdZ8QsCjDHw2MC4CFQDpn0gWQe5Q4LkUFvKBZ-mlW7ZRYQIVALmsjJh6xMFVtDAkWvAvlAPOjZlq&amp;Signature=dw0K4x1wDeDXYjWvXw6iPa5MjgU%3D" alt="图9"></p>
+
+      
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blog/2017/04/13/【转载】在浏览器中输入网址到打开网页的过程/" rel="next" title="【转载】在浏览器中输入网址到打开网页的过程">
+                <i class="fa fa-chevron-left"></i> 【转载】在浏览器中输入网址到打开网页的过程
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog/2017/08/28/【原创】在mac上如何用safari调试ios手机的移动端页面/" rel="prev" title="【原创】在mac上如何用safari调试ios手机的移动端页面">
+                【原创】在mac上如何用safari调试ios手机的移动端页面 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -363,6 +419,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -383,8 +443,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -440,6 +509,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#第一步：需要将自己的手机调成开发者模式，一般的安卓手机都是找到手机的版本号，然后连续点击7次左右，如图1所示："><span class="nav-number">1.1.</span> <span class="nav-text">第一步：需要将自己的手机调成开发者模式，一般的安卓手机都是找到手机的版本号，然后连续点击7次左右，如图1所示：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第二步：打开手机的设置选项，找到开发者选项"><span class="nav-number">1.2.</span> <span class="nav-text">第二步：打开手机的设置选项，找到开发者选项</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第三步：将开发者选项和USB调试都打开"><span class="nav-number">1.3.</span> <span class="nav-text">第三步：将开发者选项和USB调试都打开</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第四步：打开电脑上的谷歌浏览器，调出控制台，并点击图4和图5中箭头所指部分"><span class="nav-number">1.4.</span> <span class="nav-text">第四步：打开电脑上的谷歌浏览器，调出控制台，并点击图4和图5中箭头所指部分</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第五步：在之后出现的页面中要保证右边setting部分的第一个选项：Discover-USB-devices是选中状态，如图6"><span class="nav-number">1.5.</span> <span class="nav-text">第五步：在之后出现的页面中要保证右边setting部分的第一个选项：Discover USB devices是选中状态，如图6</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第六步：用你数据链连接你的电脑和手机，手机就会弹出一个连接提示，如图7所示，点击允许即可"><span class="nav-number">1.6.</span> <span class="nav-text">第六步：用你数据链连接你的电脑和手机，手机就会弹出一个连接提示，如图7所示，点击允许即可</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第七步：在电脑上打开谷歌浏览器并输入chrome-inspect-，同时在手机上打开谷歌浏览器，并输入要调试的网页，如百度，点击inspect就可以调试页面啦"><span class="nav-number">1.7.</span> <span class="nav-text">第七步：在电脑上打开谷歌浏览器并输入chrome://inspect/，同时在手机上打开谷歌浏览器，并输入要调试的网页，如百度，点击inspect就可以调试页面啦</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#最后就是inspect的页面啦"><span class="nav-number">1.8.</span> <span class="nav-text">最后就是inspect的页面啦</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -587,6 +672,10 @@
 
 
   
+  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/blog/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
