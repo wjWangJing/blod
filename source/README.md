@@ -1,5 +1,7 @@
 ### 一个前端渣渣闲来无事的产出
 
+[【原创】微信小程序开发遇到的问题](https://wjwangjing.github.io/blog/2018/04/24/%E3%80%90%E5%8E%9F%E5%88%9B%E3%80%91%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/)
+
 [【原创】关于git操作](https://wjwangjing.github.io/blog/2017/10/20/%E3%80%90%E5%8E%9F%E5%88%9B%E3%80%91%E5%85%B3%E4%BA%8Egit%E6%93%8D%E4%BD%9C/)
 
 [【原创】UC浏览器中不显示img图片](https://wjwangjing.github.io/blog/2017/09/27/%E3%80%90%E5%8E%9F%E5%88%9B%E3%80%91UC%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E4%B8%8D%E6%98%BE%E7%A4%BAimg%E5%9B%BE%E7%89%87/)
