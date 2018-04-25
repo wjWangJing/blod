@@ -1,5 +1,7 @@
 ### 一个前端渣渣闲来无事的产出
 
+[【原创】hexo系列问题](https://wjwangjing.github.io/blog/2018/04/25/%E3%80%90%E5%8E%9F%E5%88%9B%E3%80%91hexo%E7%B3%BB%E5%88%97%E9%97%AE%E9%A2%98/)
+
 [【原创】微信小程序开发遇到的问题](https://wjwangjing.github.io/blog/2018/04/24/%E3%80%90%E5%8E%9F%E5%88%9B%E3%80%91%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/)
 
 [【原创】关于git操作](https://wjwangjing.github.io/blog/2017/10/20/%E3%80%90%E5%8E%9F%E5%88%9B%E3%80%91%E5%85%B3%E4%BA%8Egit%E6%93%8D%E4%BD%9C/)
