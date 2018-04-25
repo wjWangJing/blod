@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[【原创】hexo系列问题]]></title>
+    <url>%2Fblog%2F2018%2F04%2F25%2F%E3%80%90%E5%8E%9F%E5%88%9B%E3%80%91hexo%E7%B3%BB%E5%88%97%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[前言 用hexo搞了个自己的博客，顺便记录一下自己踩过的坑 一、hexo系列问题之部署到github时会删掉README文件1、首先，先来看一下为什么部署之后会删掉README文件：&emsp;&emsp;在编辑完博客内容之后，我们会先执行命令hexo g来生成静态文件，此时会把source文件里的.md格式的文件渲染为html文件并放到public下面，接下来执行命令hexo d，会把public下面的所有文件提交到对应的XXX.github.io这个仓库；但是README.md并没有出现在public中，所以github会认为我们删掉了README文件 2、填坑&emsp;&emsp;1）我们在本地的source文件里新建一个README.md文件。&emsp;&emsp;2）修改Hexo根目录下的_config.yml文件，将skip_render参数的值设置为README.md 加上第二步这个设置，是为了告诉hexo的解析器，在渲染source文件里的md文件时，跳过README.md文件 二、hexo首页文章显示查看原文按钮&emsp;&emsp;在文章中添加如下格式：123这是摘要&lt;!-- more --&gt; 这是全文 需要注意的是，点击 《阅读全文》 之后，文章会自动定位到所在位置，想要修改成从头阅读需要修改_config.yml 文件：1scroll_to_more: false]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[【原创】微信小程序开发遇到的问题]]></title>
     <url>%2Fblog%2F2018%2F04%2F24%2F%E3%80%90%E5%8E%9F%E5%88%9B%E3%80%91%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%2F</url>
     <content type="text"><![CDATA[前言 最近在开发微信小程序，顺便记录一下自己踩过的坑 一、按钮样式的修改小程序默认按钮样式背景色是灰色，有边框，如图1，想要修改成背景色为绿色，无边框，如图2，于是做了如下修改：123&lt;!-- wxml文件 --&gt;&lt;button class=&quot;btn1&quot; type=&quot;default&quot;&gt; default &lt;/button&gt;&lt;button class=&quot;btn2&quot; type=&quot;default&quot;&gt; default &lt;/button&gt; 123456789101112/*wxss文件*/button.btn1&#123;width:200rpx;margin:50rpx auto;&#125;button.btn2&#123;width:200rpx;margin:50rpx auto;border:none;background:#00D6A6;color:#ffffff;&#125; 结果得到了图3的结果，发现边框并没有去掉 研究之后发现，按钮的默认边框是添加在button：after伪类上面，于是进行如下修改： 123button.btn2::after&#123; border:none;&#125; 这样就大功告成了 二、使用wx.getImageInfo时，在微信开发者工具中没有问题，但是真机调试时发现，既不走success的回调，也不走fail的回调，研究之后发现问题所在，需要把img的域名添加在downloadFile下才能调用三、bind事件绑定不会阻止冒泡事件向上冒泡，catch事件绑定可以阻止冒泡事件向上冒泡。四、小程序中只有用组件包起来的文字才能在手机上长按选中，不用这个组件包起来的文字不能被长按选中五、wxss中背景图片只能用绝对地址，或者用base64六、canvas不支持网络图片，获取头像图片地址，然后把图片下载到微信的临时目录或者本地。]]></content>
