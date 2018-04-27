@@ -125,5 +125,6 @@ tags:
 ```
 **需要注意的是：
 1、这个uploader初始化的时候如果放在change事件中是不会执行的
-2、分块上传时，一些分辨率或者色彩密度较高的图片不支持切片**
+2、分块上传时，一些分辨率或者色彩密度较高的图片不支持切片
+3、点击选择文件之后函数不执行的原因可能有：1）browse_button和container的值写成了class，但是不支持class，需要改成id名；2）函数没有初始化；3）后台返回来的token字段不正确，如果是这个原因，可以尝试将token改为uptoken**
 最后附上[七牛官方的上传demo](http://jssdk.demo.qiniu.io/?ref=developer.qiniu.com)
