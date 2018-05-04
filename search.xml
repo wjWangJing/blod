@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[【原创】你见过这样的console么？]]></title>
+    <url>%2Fblog%2F2018%2F05%2F04%2F%E3%80%90%E5%8E%9F%E5%88%9B%E3%80%91%E4%BD%A0%E8%A7%81%E8%BF%87%E8%BF%99%E6%A0%B7%E7%9A%84console%E4%B9%88%EF%BC%9F%2F</url>
+    <content type="text"><![CDATA[前言 console是前端开发中常用的调试方法，但是你见过这种样式的console么？ &emsp;&emsp;比如这样的： 或者这样的： 又或者这样的： 这种带着css样式的console是不是看起来更好一点。其实实现方法很简单：格式如下：1console.log(&quot;%c需要输出的信息 &quot;, &quot;css 代码&quot;); 可以复制以下代码到控制台自己试一下：1console.log(&quot;%cHello World&quot;, &quot;font-size:30px;padding:10px;color: #fff;text-transform: uppercase;text-shadow:0 0 5px #fff,0 0 10px #fff, 0 0 15px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de; &quot;); 当然，如果有足够的时间，可以加上上面这些效果，给console添一点乐趣，毕竟，有时候开发也是很无聊的。但是大部分时候，没有时间去搞这些花里胡哨的东西，在日常开发中，用的最多的就是console.log()，输出的信息多了，很容易看晕，毕竟，我就是经常干这种事情的人，emmm。。所以说为了可以让自己输出的信息变得可读性高一点，岂不是很好。比如：可以用console.warn()输出警告信息：可以用console.error()输出错误信息：可以用console.info()输出多个对象信息：可以用console.table()将数据输出成表格： 开发的时候加上这些是不是能添点乐趣？最后再补上MDN文档]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[【原创】hexo系列问题]]></title>
     <url>%2Fblog%2F2018%2F04%2F25%2F%E3%80%90%E5%8E%9F%E5%88%9B%E3%80%91hexo%E7%B3%BB%E5%88%97%E9%97%AE%E9%A2%98%2F</url>
     <content type="text"><![CDATA[前言 用hexo搞了个自己的博客，顺便记录一下自己踩过的坑 一、hexo系列问题之部署到github时会删掉README文件1、首先，先来看一下为什么部署之后会删掉README文件：&emsp;&emsp;在编辑完博客内容之后，我们会先执行命令hexo g来生成静态文件，此时会把source文件里的.md格式的文件渲染为html文件并放到public下面，接下来执行命令hexo d，会把public下面的所有文件提交到对应的XXX.github.io这个仓库；但是README.md并没有出现在public中，所以github会认为我们删掉了README文件 2、填坑&emsp;&emsp;1）我们在本地的source文件里新建一个README.md文件。&emsp;&emsp;2）修改Hexo根目录下的_config.yml文件，将skip_render参数的值设置为README.md 加上第二步这个设置，是为了告诉hexo的解析器，在渲染source文件里的md文件时，跳过README.md文件 二、hexo首页文章显示查看原文按钮&emsp;&emsp;在文章中添加如下格式：123这是摘要&lt;!-- more --&gt; 这是全文 需要注意的是，点击 《阅读全文》 之后，文章会自动定位到所在位置，想要修改成从头阅读需要修改_config.yml 文件：1scroll_to_more: false]]></content>
